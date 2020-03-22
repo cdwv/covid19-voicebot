@@ -12,3 +12,10 @@ włączonym Text-To-Speech API.
 
 5. Zadzwoń na numer 5000.
 
+### Setup Flotiq
+
+Utworz konto [Flotiq](https://flotiq.com) i pobierz klucz API.
+
+### Maintainers
+
+Maintained by [CodeWave](https://codewave.eu)

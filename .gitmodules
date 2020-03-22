@@ -1,0 +1,3 @@
+[submodule "asterisk-speech-recog"]
+	path = asterisk-speech-recog
+	url = git://github.com/zaf/asterisk-speech-recog

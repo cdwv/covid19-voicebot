@@ -1,0 +1,17 @@
+FROM gdaszuta/asterisk:17
+
+RUN curl -sL https://rpm.nodesource.com/setup_12.x | bash -
+RUN yum install -y epel-release && \
+    yum install \
+        nodejs openssl \
+        perl-JSON perl-LWP-Protocol-https.noarch \
+        sox mpg123 which -y && \
+        yum clean all
+
+COPY ast_tls_cert /
+RUN chmod a+x /ast_tls_cert
+ADD --chown=asterisk asterisk_config/*.conf /etc/asterisk/
+ADD --chown=asterisk speech-to-text-eagi/ /var/lib/asterisk/agi-bin/speech-to-text-eagi/
+WORKDIR /var/lib/asterisk/agi-bin/speech-to-text-eagi/
+RUN npm install
+WORKDIR /

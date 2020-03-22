@@ -1,0 +1,9 @@
+FROM node:12
+
+USER node
+ADD --chown=node src/ /app/
+ADD --chown=node package.json package-lock.json /app/
+WORKDIR /app
+RUN npm install
+
+ENTRYPOINT node .

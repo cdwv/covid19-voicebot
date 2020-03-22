@@ -1,0 +1,17 @@
+version: '2'
+
+services:
+  asterisk:
+    build:
+      context: .
+      dockerfile: Dockerfile_asterisk
+    network_mode: host
+    volumes:
+      - ./audio_snippets:/var/lib/asterisk/sounds/en/audio_snippets
+  node:
+    build:
+      context: .
+      dockerfile: Dockerfile_node
+    network_mode: host
+    volumes:
+      - ./audio_snippets:/app/audio_snippets

@@ -12,6 +12,6 @@
     "@google-cloud/text-to-speech": "^2.3.0",
     "ding-dong": "^0.1.7",
     "node-fetch": "^2.6.0",
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.22"
   }
 }
